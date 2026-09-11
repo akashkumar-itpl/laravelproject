@@ -1,0 +1,59 @@
+<IfModule mod_rewrite.c>
+
+    <IfModule mod_negotiation.c>
+
+        Options -MultiViews -Indexes
+
+    </IfModule>
+
+
+
+    RewriteEngine On
+
+
+
+    RewriteCond %{HTTP:Authorization} .
+
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+
+
+    RewriteCond %{HTTP:X-XSRF-TOKEN} .
+
+    RewriteRule .* - [E=HTTP_X_XSRF_TOKEN:%{HTTP:X-XSRF-TOKEN}]
+
+
+
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+
+    RewriteRule ^ index.php [L]
+
+
+
+    
+    # .env
+    RewriteRule ^\.env(?:\..*)?$ - [F,L,NC]
+
+    # Composer
+    RewriteRule ^composer\.(json|lock)$ - [F,L,NC]
+
+    # Laravel logs
+    RewriteRule ^storage/logs(?:/|$) - [F,L,NC]
+
+    # Vendor
+    RewriteRule ^vendor(?:/|$) - [F,L,NC]
+
+    # Other Laravel internal directories
+    RewriteRule ^app(?:/|$) - [F,L,NC]
+    RewriteRule ^bootstrap(?:/|$) - [F,L,NC]
+    RewriteRule ^config(?:/|$) - [F,L,NC]
+    RewriteRule ^database(?:/|$) - [F,L,NC]
+    RewriteRule ^resources(?:/|$) - [F,L,NC]
+    RewriteRule ^routes(?:/|$) - [F,L,NC]
+
+    # Other sensitive files
+    RewriteRule ^artisan$ - [F,L,NC]
+
+</IfModule>
