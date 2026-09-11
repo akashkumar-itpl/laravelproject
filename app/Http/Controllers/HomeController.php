@@ -4,8 +4,8 @@
 
 namespace App\Http\Controllers;
 
-//akash
-//vishal
+//my name is akash 
+//my name is vishal
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
