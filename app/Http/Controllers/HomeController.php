@@ -4,10 +4,6 @@
 
 namespace App\Http\Controllers;
 
-//my name is akash 
-//my name is vishal
-//my name is piyush
-//yes Changes add push
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
@@ -21,7 +17,7 @@ use App\Models\Admin\Footer;
 use App\Models\Admin\Contacts;
 use App\Models\Admin\Businessmodels;
 use App\Models\Admin\Ourcorestrengths;
-use App\Models\Admin\Achievements;
+use App\Models\Admin\Achievements; 
 use Validator; 
 use App\Models\Admin\Keyfeatures;
 use App\Models\Admin\Ourproducts;
