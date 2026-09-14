@@ -1,6 +1,6 @@
 <?php
 
-//changes yes
+//changes live
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
