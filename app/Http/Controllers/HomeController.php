@@ -67,7 +67,7 @@ class HomeController extends Controller
         foreach ($homeData as $key => $value) {
 
             $frontData[$value->field_name] = $value->field_value;
-
+ 
         }
         $aboutfrontData = array();
         foreach ($aboutdata as $key => $value) {
