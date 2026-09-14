@@ -1,8 +1,6 @@
 <?php
 
-
-//this is test
-//return code
+//changes
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
