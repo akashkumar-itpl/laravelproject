@@ -55,7 +55,7 @@ class HomeController extends Controller
 
     {
 
-        echo "its m"; die;
+      //  echo "its m"; die;
 
         $homeData         = HomePage::all();
         $aboutdata = AboutUs::all();
